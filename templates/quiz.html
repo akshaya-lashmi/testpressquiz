@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<ul>
+    {% for q in quiz %}
+
+    <li>
+        {{q.question.query}}
+    </li>
+
+    <input type="radio" name="{{q.question}}" value={{q.question.option1}}>
+        {{q.question.option1}}
+    <br>
+    <input type="radio" name="{{q.question}}" value={{q.question.option2}}>
+        {{q.question.option2}}
+    <br>
+    <input type="radio" name="{{q.question}}" value={{q.question.option3}}>
+        {{q.question.option3}}
+    <br>
+    <input type="radio" name="{{q.question}}" value={{q.question.option3}}>
+        {{q.question.option4}}
+    <br>
+
+    {% endfor %}
+
+</ul>
+<center><input type="button" name="submit" value="Submit Quiz"></center>
+</body>
+</html>
